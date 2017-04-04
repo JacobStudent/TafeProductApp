@@ -32,6 +32,7 @@ namespace ProductApps
 
             int DELIVERY_COST = 25;
             int WRAP_COST = 5;
+            decimal GST = 1.1M;
 
             try
             {
@@ -40,6 +41,7 @@ namespace ProductApps
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 totalChargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment + DELIVERY_COST);
                 totalWrapTextBlock.Text = Convert.ToString(cProduct.TotalPayment + DELIVERY_COST + WRAP_COST);
+                totalGSTTextBlock.Text = Convert.ToString((cProduct.TotalPayment + DELIVERY_COST + WRAP_COST) * GST);
             }
             catch (FormatException)
             {
