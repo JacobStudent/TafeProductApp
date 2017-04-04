@@ -31,6 +31,7 @@ namespace ProductApps
         {
 
             int DELIVERY_COST = 25;
+            int WRAP_COST = 5;
 
             try
             {
@@ -38,6 +39,7 @@ namespace ProductApps
                 cProduct.calTotalPayment();
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 totalChargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment + DELIVERY_COST);
+                totalWrapTextBlock.Text = Convert.ToString(cProduct.TotalPayment + DELIVERY_COST + WRAP_COST);
             }
             catch (FormatException)
             {
